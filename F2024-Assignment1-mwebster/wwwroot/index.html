@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #Page {
+            text-align: center;
+            background-color: #D9C0A0;
+            color: #7F0F12;
+            font-family: "Domine", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #Title {
+            font-stretch: extra-expanded;
+            text-transform:capitalize;
+
+        }
+
+        #CoverArt {
+            border-radius: 50%;
+            border: ridge;
+            border-width: 4px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        #Rating {
+            font-size: 24px;
+        }
+
+        #Trailer {
+        }
+
+        #Summary {
+            font-size: 20px;
+        }
+
+        #Actors {
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .checked {
+            color: darkorange;
+        }
+
+        .button {
+            color: #7F0F12;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: double;
+            border-width: 10px;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .peeking-image {
+            position: absolute;
+            top: -120px;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 350px;
+            border-radius: 50%;
+            z-index: 0;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translate(0);
+            }
+
+            25% {
+                transform: translateX(0.5px);
+            }
+
+            50% {
+                transform: translateX(-0.5px);
+            }
+
+            75% {
+                transform: translateX(0.5px);
+            }
+        }
+
+        .peeking-image:hover {
+            animation: shake 0.5s ease-in-out;
+            animation-iteration-count: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="Page">
+        <div class="layer">
+        <h1 id="Title">
+            <img width="65" height="65" src="https://static.vecteezy.com/system/resources/thumbnails/047/758/322/small/a-retro-styled-pixel-art-illustration-of-a-brown-coconut-png.png" />
+            MONTY PYTHON AND THE HOLY GRAIL
+            <img width="65" height="65" src="https://static.vecteezy.com/system/resources/thumbnails/047/758/322/small/a-retro-styled-pixel-art-illustration-of-a-brown-coconut-png.png" />
+        </h1><br /><br /><br /><br />
+        <div class="image-container">
+            <img width="400" height="600" id="CoverArt" src="https://m.media-amazon.com/images/M/MV5BMGE0YmJlMzAtNmU1YS00NzA5LWE0MWItODQzODhmZDBhZGU3XkEyXkFqcGdeQXVyMTA3MzQ4MTc0._V1_.jpg" />
+            <img class ="peeking-image"src="https://res.cloudinary.com/dha1zc6dh/image/upload/v1725553183/e9aedfee5cb726c2fc10356721ca042d4aa20430-1804x1080-removebg-preview_adldlv.png" />
+        </div><br /><br />
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span><br />
+        <h5 id="Rating">8.2/10</h5>
+        <iframe width="666" height="375" src="https://www.youtube.com/embed/4b52A3sKz-I" title="Monty Python and the Holy Grail - Trailer Fall 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br /><br /><a href="https://www.imdb.com/title/tt0071853/" class="button">View on IMDB</a><br />
+        <p id="Summary">King Arthur and his Knights of the Round Table embark on a surreal, low-budget search for the Holy Grail, encountering many, very silly obstacles.</p><br /><br />
+        <h3>Starring:</h3>
+        <ul id="Actors">
+            <li>Graham Chapman</li>
+            <li>John Cleese</li>
+            <li>Eric Lidle</li>
+            <li>Terry Gilliam</li>
+            <li>Terry Jones</li>
+        </ul>
+        </div>
+    </div>
+</body>
+</html>
